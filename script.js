@@ -1,34 +1,34 @@
 const playlist = [
-  { title: 'Elegie', file: 'audio/Elegie.mp3', index: 1 },
-  { title: 'IDK', file: 'audio/IDK - RPT MCK.mp3', index: 2 },
-  { title: "Wtf Bby I'm Lit", file: "audio/Wtf Bby I'm Lit.mp3", index: 3 },
-  { title: 'Anh Không Muốn Nó Dễ Dàng', file: 'audio/Anh Không Muốn Nó Dễ Dàng.mp3', index: 4 },
-  { title: 'Baby (ft. marzuz)', file: 'audio/Baby (feat. marzuz).mp3', index: 5 },
-  { title: 'Yêu Anh Giết Anh', file: 'audio/Yêu Anh Giết Anh.mp3', index: 6 },
-  { title: 'Mắt Môi Tay Chân (ft. Tage)', file: 'audio/Mắt Môi Tay Chân (feat. Tage).mp3', index: 7 },
-  { title: 'Đao Của Anh Vừa', file: 'audio/Đao Của Anh Vừa.mp3', index: 8 },
-  { title: 'Là Gì Của Nhau', file: 'audio/Là Gì Của Nhau.mp3', index: 9 },
-  { title: 'Night In Prague', file: 'audio/Night In Prague.mp3', index: 10 },
-  { title: 'Một Cái Ôm', file: 'audio/Một Cái Ôm.mp3', index: 11 },
-  { title: 'Liệm', file: 'audio/Liệm - RPT MCK.mp3', index: 12 },
-  { title: 'Nếu Như Ta Chẳng Còn (ft. A$AP Ướt Mi)', file: 'audio/Nếu Như Ta Chẳng Còn (feat. AAP Ướt Mi) - RPT MCK.mp3', index: 13 },
-  { title: 'Ai Mới Là Kẻ Xấu Xa', file: 'audio/Ai Mới Là Kẻ Xấu Xa.mp3', index: 14 },
-  { title: 'Slippery (ft. Tùng Dương)', file: 'audio/Slippery (feat. Tùng Dương).mp3', index: 15 },
-  { title: 'Intenpol', file: 'audio/Intenpol.mp3', index: 16 },
-  { title: 'Tây Thi', file: 'audio/Tây Thi.mp3', index: 17 },
-  { title: 'Hút và Hút', file: 'audio/Hút và Hút.mp3', index: 18 },
-  { title: 'Dưa Chua', file: 'audio/Dưa Chua.mp3', index: 19 },
-  { title: 'Xa Xôi (ft. Obito)', file: 'audio/Xa Xôi (feat. Obito).mp3', index: 20 },
-  { title: 'Che Phủ', file: 'audio/Che Phủ.mp3', index: 21 },
-  { title: 'Oanh M = Thuốc', file: 'audio/Oanh M = Thuoc.mp3', index: 22 },
-  { title: 'Ghét Xong Lại Thích', file: 'audio/Ghet Xog Lai Thik.mp3', index: 23 },
-  { title: 'Nhìn Kẻ Thù Của Tao', file: 'audio/Nhìn Kẻ Thù Của Tao.mp3', index: 24 },
-  { title: 'Envy (ft. THANHDRAW)', file: 'audio/Envy (feat. THANHDRAW).mp3', index: 25 },
-  { title: 'Cảm Ơn', file: 'audio/Cảm Ơn.mp3', index: 26 },
-  { title: 'Không Cần Lo Cho Tao', file: 'audio/Không Cần Lo Cho Tao.mp3', index: 27 },
-  { title: 'Huh (ft. RPT ORIJINN & THANHDRAW)', file: 'audio/Huh (feat. RPT Orijinn & THANHDRAW).mp3', index: 28 },
-  { title: 'Nguyễn Văn Mười', file: 'audio/Nguyễn Văn Mười.mp3', index: 29 },
-  { title: 'Thịt Lợn', file: 'audio/Thịt Lợn.mp3', index: 30 }
+  { title: 'Elegie', file: 'audio/Elegie.mp3', index: 1, cover: 'artwork/HVL_MCK_Elegie_Track01_N0L4B3L.webp' },
+  { title: 'IDK', file: 'audio/IDK - RPT MCK.mp3', index: 2, cover: 'artwork/HVL_MCK_IDK_Track02_N0L4B3L.webp' },
+  { title: "Wtf Bby I'm Lit", file: "audio/Wtf Bby I'm Lit.mp3", index: 3, cover: 'artwork/HVL_MCK_Wtf_Bby_Im_Lit_Track03_N0L4B3L.webp' },
+  { title: 'Anh Không Muốn Nó Dễ Dàng', file: 'audio/Anh Không Muốn Nó Dễ Dàng.mp3', index: 4, cover: 'artwork/HVL_MCK_Anh_Khong_Muon_No_De_Dang_Track04_N0L4B3L.webp' },
+  { title: 'Baby (ft. marzuz)', file: 'audio/Baby (feat. marzuz).mp3', index: 5, cover: 'artwork/HVL_MCK_Baby_Track05_N0L4B3L.webp' },
+  { title: 'Yêu Anh Giết Anh', file: 'audio/Yêu Anh Giết Anh.mp3', index: 6, cover: 'artwork/HVL_MCK_Yeu_Anh_Giet_Anh_Track06_N0L4B3L.webp' },
+  { title: 'Mắt Môi Tay Chân (ft. Tage)', file: 'audio/Mắt Môi Tay Chân (feat. Tage).mp3', index: 7, cover: 'artwork/HVL_MCK_Mat_Moi_Tay_Chan_Track07_N0L4B3L.webp' },
+  { title: 'Đao Của Anh Vừa', file: 'audio/Đao Của Anh Vừa.mp3', index: 8, cover: 'artwork/HVL_MCK_Dao_Cua_Anh_Vua_Track08_N0L4B3L.webp' },
+  { title: 'Là Gì Của Nhau', file: 'audio/Là Gì Của Nhau.mp3', index: 9, cover: 'artwork/HVL_MCK_La_Gi_Cua_Nhau_Track09_N0L4B3L.webp' },
+  { title: 'Night In Prague', file: 'audio/Night In Prague.mp3', index: 10, cover: 'artwork/HVL_MCK_Night_In_Prague_Track10_N0L4B3L.webp' },
+  { title: 'Một Cái Ôm', file: 'audio/Một Cái Ôm.mp3', index: 11, cover: 'artwork/HVL_MCK_Mot_Cai_Om_Track11_N0L4B3L.webp' },
+  { title: 'Liệm', file: 'audio/Liệm - RPT MCK.mp3', index: 12, cover: 'artwork/HVL_MCK_Liem_Track12_N0L4B3L.webp' },
+  { title: 'Nếu Như Ta Chẳng Còn (ft. A$AP Ướt Mi)', file: 'audio/Nếu Như Ta Chẳng Còn (feat. AAP Ướt Mi) - RPT MCK.mp3', index: 13, cover: 'artwork/HVL_MCK_Neu_Nhu_Ta_Chang_Con_Track13_N0L4B3L.webp' },
+  { title: 'Ai Mới Là Kẻ Xấu Xa', file: 'audio/Ai Mới Là Kẻ Xấu Xa.mp3', index: 14, cover: 'artwork/HVL_MCK_Ai_Moi_La_Ke_Xau_Xa_Track14_N0L4B3L.webp' },
+  { title: 'Slippery (ft. Tùng Dương)', file: 'audio/Slippery (feat. Tùng Dương).mp3', index: 15, cover: 'artwork/HVL_MCK_Slippery_Track15_N0L4B3L.webp' },
+  { title: 'Intenpol', file: 'audio/Intenpol.mp3', index: 16, cover: 'artwork/HVL_MCK_Intenpol_Track16_N0L4B3L.webp' },
+  { title: 'Tây Thi', file: 'audio/Tây Thi.mp3', index: 17, cover: 'artwork/HVL_MCK_Tay_Thi_Track17_N0L4B3L.webp' },
+  { title: 'Hút và Hút', file: 'audio/Hút và Hút.mp3', index: 18, cover: 'artwork/HVL_MCK_Hut_Va_Hut_Track18_N0L4B3L.webp' },
+  { title: 'Dưa Chua', file: 'audio/Dưa Chua.mp3', index: 19, cover: 'artwork/HVL_MCK_Dua_Chua_Track19_N0L4B3L.webp' },
+  { title: 'Xa Xôi (ft. Obito)', file: 'audio/Xa Xôi (feat. Obito).mp3', index: 20, cover: 'artwork/HVL_MCK_Xa_Xoi_Track20_N0L4B3L.webp' },
+  { title: 'Che Phủ', file: 'audio/Che Phủ.mp3', index: 21, cover: 'artwork/HVL_MCK_Che_Phu_Track21_N0L4B3L.webp' },
+  { title: 'Oanh M = Thuốc', file: 'audio/Oanh M = Thuoc.mp3', index: 22, cover: 'artwork/HVL_MCK_Oanh_M_Thuoc_Track22_N0L4B3L.webp' },
+  { title: 'Ghét Xong Lại Thích', file: 'audio/Ghet Xog Lai Thik.mp3', index: 23, cover: 'artwork/HVL_MCK_Ghet_Xog_Lai_Thik_Track23_N0L4B3L.webp' },
+  { title: 'Nhìn Kẻ Thù Của Tao', file: 'audio/Nhìn Kẻ Thù Của Tao.mp3', index: 24, cover: 'artwork/HVL_MCK_Nhin_Ke_Thu_Cua_Tao_Track24_N0L4B3L.webp' },
+  { title: 'Envy (ft. THANHDRAW)', file: 'audio/Envy (feat. THANHDRAW).mp3', index: 25, cover: 'artwork/HVL_MCK_Envy_Track25_N0L4B3L.webp' },
+  { title: 'Cảm Ơn', file: 'audio/Cảm Ơn.mp3', index: 26, cover: 'artwork/HVL_MCK_Cam_On_Track26_N0L4B3L.webp' },
+  { title: 'Không Cần Lo Cho Tao', file: 'audio/Không Cần Lo Cho Tao.mp3', index: 27, cover: 'artwork/HVL_MCK_Khong_Can_Lo_Cho_Tao_Track27_N0L4B3L.webp' },
+  { title: 'Huh (ft. RPT ORIJINN & THANHDRAW)', file: 'audio/Huh (feat. RPT Orijinn & THANHDRAW).mp3', index: 28, cover: 'artwork/HVL_MCK_Huh_Track28_N0L4B3L.webp' },
+  { title: 'Nguyễn Văn Mười', file: 'audio/Nguyễn Văn Mười.mp3', index: 29, cover: 'artwork/HVL_MCK_Nguyen_Van_Muoi_Track29_N0L4B3L.webp' },
+  { title: 'Thịt Lợn', file: 'audio/Thịt Lợn.mp3', index: 30, cover: 'artwork/HVL_MCK_Thit_Lon_Track30_N0L4B3L.webp' }
 ];
 
 const audio = document.getElementById('audio');
@@ -44,6 +44,8 @@ const progressBar = document.getElementById('progressBar');
 const currentTimeEl = document.getElementById('currentTime');
 const totalTimeEl = document.getElementById('totalTime');
 const volumeBar = document.getElementById('volumeBar');
+const heroCoverImg = document.getElementById('heroCoverImg');
+const heroCoverFrame = document.getElementById('heroCoverFrame');
 
 const REPEAT_STATES = {
   NONE: 0,
@@ -85,6 +87,9 @@ function formatTime(value) {
 function updateNowPlaying() {
   const track = getCurrentTrack();
   nowPlayingTitle.textContent = track.title;
+  heroCoverImg.src = track.cover;
+  heroCoverImg.alt = `Ảnh bìa ${track.title}`;
+  heroCoverFrame.classList.remove('cover-missing');
 
   document.querySelectorAll('.track-item').forEach((item) => {
     const isActive = Number(item.dataset.index) === currentTrackIndex;
@@ -129,9 +134,20 @@ function renderPlaylist() {
 
     item.innerHTML = `
       <span class="track-number">${track.index}</span>
+      <span class="track-cover-wrap">
+        <img class="track-cover" src="${track.cover}" alt="Ảnh bìa ${track.title}" loading="lazy" />
+      </span>
       <span class="track-title">${track.title}</span>
       <span class="track-status">Now</span>
     `;
+
+    const trackCover = item.querySelector('.track-cover');
+    const trackCoverWrap = item.querySelector('.track-cover-wrap');
+    if (trackCover && trackCoverWrap) {
+      trackCover.addEventListener('error', () => {
+        trackCoverWrap.classList.add('is-missing');
+      });
+    }
 
     item.addEventListener('click', () => {
       selectTrack(Number(item.dataset.index), true);
@@ -142,6 +158,10 @@ function renderPlaylist() {
 
   updateNowPlaying();
 }
+
+heroCoverImg.addEventListener('error', () => {
+  heroCoverFrame.classList.add('cover-missing');
+});
 
 function selectTrack(index, autoplay = false) {
   if (index < 0 || index >= playlist.length) {
