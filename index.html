@@ -3,64 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="hvl-logo.svg" />
-    <title>Spotify Style Album Player</title>
+    <link rel="icon" type="image/svg+xml" href="mck-hvl-album-cover-art.webp" />
+    <title>HVL THE ALBUM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="spotify-app">
-      <aside class="sidebar">
-        <div class="brand-logo">Spotify</div>
-
-        <nav class="nav-menu" aria-label="Main navigation">
-          <button class="nav-item active" type="button">Home</button>
-          <button class="nav-item" type="button">Search</button>
-          <button class="nav-item" type="button">Your Library</button>
-        </nav>
-
-        <div class="library-box">
-          <div class="library-title">Album</div>
-          <div class="library-meta">30 tracks</div>
-        </div>
-      </aside>
-
+    <div class="archive-app">
       <div class="main-panel">
         <header class="topbar">
+          <a class="header-logo" aria-label="HVL logo"><img src="hvl-logo.svg" alt="HVL" /></a>
           <div class="nav-arrows">
-            <button type="button" aria-label="Back">←</button>
-            <button type="button" aria-label="Forward">→</button>
+            <span>ALBUM ARCHIVE</span>
           </div>
-          <div class="user-pill">HVL Album</div>
+          <div class="header-right">
+            <div class="user-pill"><a href="https://youtu.be/X_mlfWmepCA" target="_blank" rel="noreferrer">YOUTUBE</a> / <a href="#player">STREAM</a></div>
+            <a class="nolabel-logo" href="#top" aria-label="No Label logo"><img src="n0l4b3l-main-logo.png" alt="No Label" /></a>
+          </div>
         </header>
 
-        <main class="content-area">
+        <main id="top" class="content-area">
           <section class="hero-panel">
             <div class="hero-cover" id="heroCoverFrame" aria-label="Album artwork">
               <img id="heroCoverImg" src="" alt="Ảnh bìa bài hát" />
               <span class="hero-cover-fallback" aria-hidden="true">♪</span>
             </div>
             <div class="hero-text">
-              <span class="mini-label">Playlist</span>
-              <h1>HVL Album</h1>
-              <p>30 bài hát • Local album player</p>
+              <p id="nowPlayingTrackIndex" class="track-index">TRACK #01</p>
+              <span class="mini-label">HVL / MCK</span>
+              <h1>ARTWORKS</h1>
+              <p>One album. Thirty fragments.<br />Press play and enter the experience.</p>
             </div>
           </section>
 
-          <section class="player-panel">
+          <section id="player" class="player-panel">
+            <div class="player-kicker">NOW PLAYING</div>
             <div class="controls-row">
               <button id="shuffleBtn" class="control-btn" type="button" aria-label="Shuffle" title="Shuffle">
-                <span>⇄</span>
+                <i class="bi bi-shuffle" aria-hidden="true"></i>
               </button>
-              <button id="prevBtn" class="control-btn nav-btn" type="button" aria-label="Previous" title="Previous">⏮</button>
-              <button id="playPauseBtn" class="play-btn" type="button" aria-label="Play or pause" title="Play/Pause">▶</button>
-              <button id="nextBtn" class="control-btn nav-btn" type="button" aria-label="Next" title="Next">⏭</button>
+              <button id="prevBtn" class="control-btn nav-btn" type="button" aria-label="Previous" title="Previous"><i class="bi bi-skip-backward-fill" aria-hidden="true"></i></button>
+              <button id="playPauseBtn" class="play-btn" type="button" aria-label="Play or pause" title="Play/Pause"><i class="bi bi-play-fill" aria-hidden="true"></i></button>
+              <button id="nextBtn" class="control-btn nav-btn" type="button" aria-label="Next" title="Next"><i class="bi bi-skip-forward-fill" aria-hidden="true"></i></button>
               <button id="repeatBtn" class="control-btn" type="button" aria-label="Repeat" title="Repeat">
-                <span id="repeatIcon">↻</span>
+                <i id="repeatIcon" class="bi bi-arrow-repeat" aria-hidden="true"></i>
               </button>
             </div>
 
             <div class="track-meta">
-              <p class="track-label">Đang phát</p>
+              <p class="track-label">HVL / MCK</p>
               <h2 id="nowPlayingTitle">Elegie</h2>
             </div>
 
@@ -73,19 +64,30 @@
             </div>
 
             <div class="volume-row">
-              <span class="volume-icon" aria-hidden="true">🔊</span>
+              <span class="volume-icon" aria-hidden="true">VOL</span>
               <input id="volumeBar" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume" />
             </div>
           </section>
 
           <aside class="playlist-panel">
             <div class="playlist-header">
-              <h3>Playlist</h3>
-              <span id="trackCount">30 bài</span>
+              <h3>TRACKLIST</h3>
+              <span id="trackCount">30 TRACKS</span>
             </div>
             <ul id="playlist" class="playlist" aria-label="Album playlist"></ul>
           </aside>
         </main>
+
+        <footer class="site-footer">
+          <p>
+            Fan-made web album player for appreciation only. No commercial use intended.
+          </p>
+          <p>
+            Credits: All music, artwork, and trademarks belong to their respective artists/rights holders.
+            If you are a rights holder and want content removed, please contact:
+            <a href="mailto:hquan.jm@gmail.com">hquan.jm@gmail.com</a>.
+          </p>
+        </footer>
       </div>
     </div>
 

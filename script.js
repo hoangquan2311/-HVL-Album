@@ -1,6 +1,6 @@
 const playlist = [
   { title: 'Elegie', file: 'audio/Elegie.mp3', index: 1, cover: 'artwork/HVL_MCK_Elegie_Track01_N0L4B3L.webp' },
-  { title: 'IDK', file: 'audio/IDK - RPT MCK.mp3', index: 2, cover: 'artwork/HVL_MCK_IDK_Track02_N0L4B3L.webp' },
+  { title: 'IDK', file: 'audio/IDK - RPT MCK.mp3', index: 2, cover: 'artwork/HVL_MCK_IDK_Track02_N0L4B3L.jpg' },
   { title: "Wtf Bby I'm Lit", file: "audio/Wtf Bby I'm Lit.mp3", index: 3, cover: 'artwork/HVL_MCK_Wtf_Bby_Im_Lit_Track03_N0L4B3L.webp' },
   { title: 'Anh Không Muốn Nó Dễ Dàng', file: 'audio/Anh Không Muốn Nó Dễ Dàng.mp3', index: 4, cover: 'artwork/HVL_MCK_Anh_Khong_Muon_No_De_Dang_Track04_N0L4B3L.webp' },
   { title: 'Baby (ft. marzuz)', file: 'audio/Baby (feat. marzuz).mp3', index: 5, cover: 'artwork/HVL_MCK_Baby_Track05_N0L4B3L.webp' },
@@ -14,7 +14,7 @@ const playlist = [
   { title: 'Nếu Như Ta Chẳng Còn (ft. A$AP Ướt Mi)', file: 'audio/Nếu Như Ta Chẳng Còn (feat. AAP Ướt Mi) - RPT MCK.mp3', index: 13, cover: 'artwork/HVL_MCK_Neu_Nhu_Ta_Chang_Con_Track13_N0L4B3L.webp' },
   { title: 'Ai Mới Là Kẻ Xấu Xa', file: 'audio/Ai Mới Là Kẻ Xấu Xa.mp3', index: 14, cover: 'artwork/HVL_MCK_Ai_Moi_La_Ke_Xau_Xa_Track14_N0L4B3L.webp' },
   { title: 'Slippery (ft. Tùng Dương)', file: 'audio/Slippery (feat. Tùng Dương).mp3', index: 15, cover: 'artwork/HVL_MCK_Slippery_Track15_N0L4B3L.webp' },
-  { title: 'Intenpol', file: 'audio/Intenpol.mp3', index: 16, cover: 'artwork/HVL_MCK_Intenpol_Track16_N0L4B3L.webp' },
+  { title: 'Intenpol', file: 'audio/Intenpol.mp3', index: 16, cover: 'artwork/HVL_MCK_Intenpol_Track16_N0L4B3L.jpg' },
   { title: 'Tây Thi', file: 'audio/Tây Thi.mp3', index: 17, cover: 'artwork/HVL_MCK_Tay_Thi_Track17_N0L4B3L.webp' },
   { title: 'Hút và Hút', file: 'audio/Hút và Hút.mp3', index: 18, cover: 'artwork/HVL_MCK_Hut_Va_Hut_Track18_N0L4B3L.webp' },
   { title: 'Dưa Chua', file: 'audio/Dưa Chua.mp3', index: 19, cover: 'artwork/HVL_MCK_Dua_Chua_Track19_N0L4B3L.webp' },
@@ -46,6 +46,7 @@ const totalTimeEl = document.getElementById('totalTime');
 const volumeBar = document.getElementById('volumeBar');
 const heroCoverImg = document.getElementById('heroCoverImg');
 const heroCoverFrame = document.getElementById('heroCoverFrame');
+const nowPlayingTrackIndex = document.getElementById('nowPlayingTrackIndex');
 
 const REPEAT_STATES = {
   NONE: 0,
@@ -87,6 +88,7 @@ function formatTime(value) {
 function updateNowPlaying() {
   const track = getCurrentTrack();
   nowPlayingTitle.textContent = track.title;
+  nowPlayingTrackIndex.textContent = `Track #${String(track.index).padStart(2, '0')}`;
   heroCoverImg.src = track.cover;
   heroCoverImg.alt = `Ảnh bìa ${track.title}`;
   heroCoverFrame.classList.remove('cover-missing');
@@ -103,23 +105,25 @@ function updateNowPlaying() {
 }
 
 function updateControls() {
-  playPauseBtn.textContent = audio.paused ? '▶' : '❚❚';
+  playPauseBtn.innerHTML = audio.paused
+    ? '<i class="bi bi-play-fill" aria-hidden="true"></i>'
+    : '<i class="bi bi-pause-fill" aria-hidden="true"></i>';
   playPauseBtn.setAttribute('aria-label', audio.paused ? 'Play' : 'Pause');
 
   shuffleBtn.classList.toggle('active', isShuffle);
 
-  let repeatText = '↻';
+  let repeatIconClass = 'bi bi-arrow-repeat';
   let title = 'Repeat';
 
   if (repeatMode === REPEAT_STATES.ALL) {
-    repeatText = '🔁';
+    repeatIconClass = 'bi bi-arrow-repeat';
     title = 'Repeat album';
   } else if (repeatMode === REPEAT_STATES.ONE) {
-    repeatText = '🔂';
+    repeatIconClass = 'bi bi-repeat-1';
     title = 'Repeat one';
   }
 
-  repeatIcon.textContent = repeatText;
+  repeatIcon.className = repeatIconClass;
   repeatBtn.title = title;
   repeatBtn.classList.toggle('active', repeatMode !== REPEAT_STATES.NONE);
 }
@@ -138,7 +142,7 @@ function renderPlaylist() {
         <img class="track-cover" src="${track.cover}" alt="Ảnh bìa ${track.title}" loading="lazy" />
       </span>
       <span class="track-title">${track.title}</span>
-      <span class="track-status">Now</span>
+      <span class="track-status">Now playing</span>
     `;
 
     const trackCover = item.querySelector('.track-cover');
