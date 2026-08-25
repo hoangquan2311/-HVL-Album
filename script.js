@@ -97,11 +97,6 @@ function updateNowPlaying() {
     const isActive = Number(item.dataset.index) === currentTrackIndex;
     item.classList.toggle('active', isActive);
   });
-
-  const activeTrack = document.querySelector(`.track-item[data-index="${currentTrackIndex}"]`);
-  if (activeTrack) {
-    activeTrack.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
 }
 
 function updateControls() {
